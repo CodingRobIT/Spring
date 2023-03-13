@@ -28,6 +28,10 @@ public class GreetingsController {
         name = newName;
 
     }
+    @GetMapping
+    public String getName(@RequestBody String vorname) {
+        return name = vorname;
+    }
 
 
 
