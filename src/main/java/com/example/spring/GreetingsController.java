@@ -1,6 +1,7 @@
 package com.example.spring;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +17,11 @@ public class GreetingsController {
     @GetMapping("/en")
     public String getGreetingsEn() {
         return "Hello";
+    }
+
+    @GetMapping("/{name}")
+    public String getGreetings(@PathVariable String name) {
+        return "Hallo " + name;
     }
 
 }
