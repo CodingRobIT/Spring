@@ -11,12 +11,12 @@ public class GreetingsController {
     @GetMapping("/de")
     public String getGreetingsDe(){
         return "Hallo ";
-    }   //localhost:8080/helloworld/en
+    }   //localhost:8080/helloworld/de
 
     @GetMapping("/en")
     public String getGreetingsEn() {
         return "Hello ";
-    }
+    }   //localhost:8080/helloworld/en
 
     @GetMapping("/{name}")
     public String getGreetings(@PathVariable String name, @RequestParam String greeting) { //localhost:8080/greetings/Hallo?greeting=robin
