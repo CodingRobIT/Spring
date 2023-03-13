@@ -11,7 +11,7 @@ public class GreetingsController {
     @GetMapping("/de")
     public String getGreetingsDe(){
         return "Hallo ";
-    }
+    }   //localhost:8080/helloworld/en
 
     @GetMapping("/en")
     public String getGreetingsEn() {
@@ -19,7 +19,7 @@ public class GreetingsController {
     }
 
     @GetMapping("/{name}")
-    public String getGreetings(@PathVariable String name, @RequestParam String greeting) {
+    public String getGreetings(@PathVariable String name, @RequestParam String greeting) { //localhost:8080/greetings/Hallo?greeting=robin
         return greeting + " " + name;
     }
 
@@ -28,11 +28,6 @@ public class GreetingsController {
         name = newName;
 
     }
-    @GetMapping
-    public String getName(@RequestBody String vorname) {
-        return name = vorname;
-    }
-
 
 
 
