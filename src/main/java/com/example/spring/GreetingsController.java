@@ -19,7 +19,7 @@ public class GreetingsController {
     }   //localhost:8080/helloworld/en
 
     @GetMapping("/{name}")
-    public String getGreetings(@PathVariable String name, @RequestParam String greeting) { //localhost:8080/greetings/Hallo?greeting=robin
+    public String getGreetings(@PathVariable String name, @RequestParam String greeting) { // localhost:8080/greetings/Robin?greeting=Hallo
         return greeting + " " + name;
     }
 
